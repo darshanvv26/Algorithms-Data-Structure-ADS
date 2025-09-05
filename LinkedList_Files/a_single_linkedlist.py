@@ -76,9 +76,9 @@ class LinkedList:
             return None
                        
 
-s = LinkedList()
-s.add_at_head(2)
-s.add_at_tail(3)
-s.add_at_tail(4)
-print(s.delete_at_head())
-print(s.delete_at_head())
+# s = LinkedList()
+# s.add_at_head(2)
+# s.add_at_tail(3)
+# s.add_at_tail(4)
+# print(s.delete_at_head())
+# print(s.delete_at_head())
