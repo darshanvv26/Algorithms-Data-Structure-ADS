@@ -74,11 +74,62 @@ class LinkedList:
             return data
         else:
             return None
-                       
+        
+    # Add after given data 
+    def add_after_data(self, key, ele):
+        new_node = self._node_(ele)
+        cur = self.head
+        while cur != None:
+            if cur.data == key:
+                new_node.next = cur.next
+                cur.next = new_node
+                if cur == self.tail:
+                    self.tail = new_node
+                self.count += 1
+                return   
+            else:
+                cur = cur.next
+        return "Key not found"
+                
+    # Delete after given data
+    def delete_after_data(self, key):
+        cur = self.head
+        while cur != None:
+            if cur.data == key:
+                temp = cur.next
+                removed_count = 0
+                while temp != None:
+                    removed_count += 1
+                    temp = temp.next
 
-# s = LinkedList()
-# s.add_at_head(2)
-# s.add_at_tail(3)
-# s.add_at_tail(4)
-# print(s.delete_at_head())
-# print(s.delete_at_head())
+                cur.next = None
+                self.tail = cur
+                self.count -= removed_count
+                return  
+            else:
+                cur = cur.next
+        return "Key not found"
+
+            
+    # Search an element
+    def search_an_ele(self, key):
+        cur = self.head
+        while cur != None:
+            if cur.data == key:
+                break
+            else:
+                cur = cur.next
+        return cur != None      
+
+    # Display linkedlist
+    def display(self):
+        cur = self.head
+        while cur != None:
+            print(f"[{cur.data}]", end='->')
+            cur = cur.next
+        print(None)
+        if not self.is_empty():
+            print("Head of the linked list is ", self.head.data)
+            print("Tail of the linked list is", self.tail.data)
+        else:
+            print("List is empty")
