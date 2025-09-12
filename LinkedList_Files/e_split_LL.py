@@ -18,12 +18,12 @@ def linkedlist_split(original_list):
 
     return list1.display(), list2.display()
 
-l1 = LinkedList()
-l1.add_at_tail(1)
-l1.add_at_tail(2)
-l1.add_at_tail(3)
-l1.add_at_tail(4)
-l1.add_at_tail(5)
-l1.add_at_tail(6)
+# l1 = LinkedList()
+# l1.add_at_tail(1)
+# l1.add_at_tail(2)
+# l1.add_at_tail(3)
+# l1.add_at_tail(4)
+# l1.add_at_tail(5)
+# l1.add_at_tail(6)
 
-linkedlist_split(l1)
+# linkedlist_split(l1)

@@ -1,6 +1,8 @@
 from a_single_linkedlist import *
 from b_merge_two_common_LL import *
 from c_sum_last_n_nodes import *
+from d_reverse_LL import *
+from e_split_LL import *
 
 
 def test_empty_list():
@@ -88,41 +90,71 @@ def test_display():
 
 #------------------------------ a_single_linkedlist testing ends here -------------------------------------------------
 
-def test_get_common_ele(): # 
-    l1 = LinkedList()
-    l1.add_at_tail(1)
-    l1.add_at_tail(2)
-    l1.add_at_tail(3)
-    l1.add_at_tail(4)
+# def test_get_common_ele(): # 
+#     l1 = LinkedList()
+#     l1.add_at_tail(1)
+#     l1.add_at_tail(2)
+#     l1.add_at_tail(3)
+#     l1.add_at_tail(4)
 
-    l2 = LinkedList()
-    l2.add_at_tail(3)
-    l2.add_at_tail(4)
-    l2.add_at_tail(5)
-    l2.add_at_tail(6)
+#     l2 = LinkedList()
+#     l2.add_at_tail(3)
+#     l2.add_at_tail(4)
+#     l2.add_at_tail(5)
+#     l2.add_at_tail(6)
 
-    common = get_common_ele(l1, l2)
-    l1.display()
-    l2.display()
-    common.display()
+#     common = get_common_ele(l1, l2)
+#     l1.display()
+#     l2.display()
+#     common.display()
 
 # test_get_common_ele()
 
 #--------------------------------- b_merge_two_common_LL testing ends here ------------------------------------------------
 
-def test_sum_of_ele():
+# def test_sum_of_ele():
+#     l1 = LinkedList()
+#     l1.add_at_tail(1)
+#     l1.add_at_tail(3)
+#     l1.add_at_tail(3)
+#     l1.add_at_tail(4)
+#     l1.add_at_tail(5)
+
+#     s = sum_of_ele(l1)
+
+    # print(s)
+
+# test_sum_of_ele()
+
+#---------------------------------- c_sum_last_n_nodes testing ends here ----------------------------------------------------
+
+# def test_rev_ll():
+#     l1 = LinkedList()
+#     l1.add_at_tail(1)
+#     l1.add_at_tail(2)
+#     l1.add_at_tail(3)
+#     l1.add_at_tail(4)
+
+#     l1.display()
+#     reverse_linkedlist(l1)
+#     l1.display()
+
+# test_rev_ll()
+
+#---------------------------------- d_reverse_LL testing ends here ------------------------------------------------------------
+
+def test_linkedlist_split():
     l1 = LinkedList()
     l1.add_at_tail(1)
-    l1.add_at_tail(3)
+    l1.add_at_tail(2)
     l1.add_at_tail(3)
     l1.add_at_tail(4)
     l1.add_at_tail(5)
+    l1.add_at_tail(6)
 
-    s = sum_of_ele(l1)
+    linkedlist_split(l1)
 
-    print(s)
+test_linkedlist_split()
 
-test_sum_of_ele()
-
-#---------------------------------- c_sum_last_n_nodes testing ends here ----------------------------------------------------
+#----------------------------------- e_split_LL testing ends here --------------------------------------------------------------
 

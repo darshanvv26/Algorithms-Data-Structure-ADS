@@ -14,7 +14,7 @@ def reverse_linkedlist(list1):
     
     list1.head = prev
         
-    return list1  
+    return list1
 
 # l1 = LinkedList()
 # l1.add_at_tail(1)
