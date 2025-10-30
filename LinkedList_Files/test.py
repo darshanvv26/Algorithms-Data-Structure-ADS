@@ -3,6 +3,11 @@ from b_merge_two_common_LL import *
 from c_sum_last_n_nodes import *
 from d_reverse_LL import *
 from e_split_LL import *
+from f_palindrome_LL import *
+from g_duplicates_rm import *
+from h_middle_ele import *
+from i_remove_odd_ele_circular_ll import *
+from j_ll_contains_cycle import *
 
 
 def test_empty_list():
@@ -90,54 +95,54 @@ def test_display():
 
 #------------------------------ a_single_linkedlist testing ends here -------------------------------------------------
 
-# def test_get_common_ele(): # 
-#     l1 = LinkedList()
-#     l1.add_at_tail(1)
-#     l1.add_at_tail(2)
-#     l1.add_at_tail(3)
-#     l1.add_at_tail(4)
+def test_get_common_ele(): # 
+    l1 = LinkedList()
+    l1.add_at_tail(1)
+    l1.add_at_tail(2)
+    l1.add_at_tail(3)
+    l1.add_at_tail(4)
 
-#     l2 = LinkedList()
-#     l2.add_at_tail(3)
-#     l2.add_at_tail(4)
-#     l2.add_at_tail(5)
-#     l2.add_at_tail(6)
+    l2 = LinkedList()
+    l2.add_at_tail(3)
+    l2.add_at_tail(4)
+    l2.add_at_tail(5)
+    l2.add_at_tail(6)
 
-#     common = get_common_ele(l1, l2)
-#     l1.display()
-#     l2.display()
-#     common.display()
+    common = get_common_ele(l1, l2)
+    l1.display()
+    l2.display()
+    common.display()
 
 # test_get_common_ele()
 
 #--------------------------------- b_merge_two_common_LL testing ends here ------------------------------------------------
 
-# def test_sum_of_ele():
-#     l1 = LinkedList()
-#     l1.add_at_tail(1)
-#     l1.add_at_tail(3)
-#     l1.add_at_tail(3)
-#     l1.add_at_tail(4)
-#     l1.add_at_tail(5)
+def test_sum_of_ele():
+    l1 = LinkedList()
+    l1.add_at_tail(1)
+    l1.add_at_tail(3)
+    l1.add_at_tail(3)
+    l1.add_at_tail(4)
+    l1.add_at_tail(5)
 
-#     s = sum_of_ele(l1)
+    s = sum_of_ele(l1)
 
-    # print(s)
+    print(s)
 
 # test_sum_of_ele()
 
 #---------------------------------- c_sum_last_n_nodes testing ends here ----------------------------------------------------
 
-# def test_rev_ll():
-#     l1 = LinkedList()
-#     l1.add_at_tail(1)
-#     l1.add_at_tail(2)
-#     l1.add_at_tail(3)
-#     l1.add_at_tail(4)
+def test_rev_ll():
+    l1 = LinkedList()
+    l1.add_at_tail(1)
+    l1.add_at_tail(2)
+    l1.add_at_tail(3)
+    l1.add_at_tail(4)
 
-#     l1.display()
-#     reverse_linkedlist(l1)
-#     l1.display()
+    l1.display()
+    reverse_linkedlist(l1)
+    l1.display()
 
 # test_rev_ll()
 
@@ -158,3 +163,105 @@ def test_display():
 
 #----------------------------------- e_split_LL testing ends here --------------------------------------------------------------
 
+def test_palindrome_LL():
+    l1 = LinkedList()
+    l1.add_at_tail(1)
+    l1.add_at_tail(2)
+    l1.add_at_tail(3)
+    l1.add_at_tail(7)
+    l1.add_at_tail(2)
+    l1.add_at_tail(1)
+    print(palindrome_LL(l1))
+
+# test_palindrome_LL()
+
+#------------------------------------ f_palindrome_LL testing ends here ---------------------------------------------------------
+
+def test_remove_duplicates():
+    l1 = LinkedList()
+    l1.add_at_tail(1)
+    l1.add_at_tail(2)
+    l1.add_at_tail(3)
+    l1.add_at_tail(0)
+    l1.add_at_tail(2)
+    l1.add_at_tail(1)
+    print(remove_duplicates(l1))
+
+# test_remove_duplicates() 
+
+#------------------------------------ g_duplicates_rm testing ends here ----------------------------------------------------------
+
+def test_middle_ele():
+    l1 = LinkedList()
+    l1.add_at_tail(2)
+    l1.add_at_tail(3)
+    l1.add_at_tail(4)
+    l1.add_at_tail(5)
+    print(middle_ele(l1))
+
+# test_middle_ele()
+
+#------------------------------------- h_middle_ele testing ends here -------------------------------------------------------------
+
+def test_remove_odd_ele():
+    cll = CircularLinkedList()
+
+    n1 = CircularLinkedList._Node(10)
+    n2 = CircularLinkedList._Node(21)
+    n3 = CircularLinkedList._Node(34)
+    n4 = CircularLinkedList._Node(43)
+    n5 = CircularLinkedList._Node(50)
+
+    n1.next = n2
+    n2.next = n3
+    n3.next = n4
+    n4.next = n5
+    n5.next = n1
+
+    cll.head = n1
+    cll.tail = n5
+    cll.count = 5
+
+    print("Original list:")
+    cll.display()
+
+    cll.remove_odd_elements()
+
+    print("\nAfter removing odd elements:")
+    cll.display()
+
+# test_remove_odd_ele()
+
+#----------------------------------------- i_remove_odd_ele_circular_ll testing ends here -----------------------------------------
+def test_ll_contains_cycle():
+    l1 = LinkedList()
+    l1.add_at_tail(2)
+    l1.add_at_tail(3)
+    l1.add_at_tail(4)
+    l1.add_at_tail(5)
+    print(ll_contains_cycle(l1))
+
+    cll = CircularLinkedList()
+    
+    n1 = CircularLinkedList._Node(10)
+    n2 = CircularLinkedList._Node(21)
+    n3 = CircularLinkedList._Node(34)
+    n4 = CircularLinkedList._Node(43)
+    n5 = CircularLinkedList._Node(50)
+    
+    n1.next = n2
+    n2.next = n3
+    n3.next = n4
+    n4.next = n5
+    n5.next = n1
+    
+    cll.head = n1
+    cll.tail = n5
+    cll.count = 5
+    
+    print(ll_contains_cycle(cll))
+
+
+# test_ll_contains_cycle()
+
+#-------------------------------------------- j_ll_contains_cycle testing ends here ----------------------------------------
