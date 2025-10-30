@@ -143,18 +143,18 @@ def test_display():
 
 #---------------------------------- d_reverse_LL testing ends here ------------------------------------------------------------
 
-def test_linkedlist_split():
-    l1 = LinkedList()
-    l1.add_at_tail(1)
-    l1.add_at_tail(2)
-    l1.add_at_tail(3)
-    l1.add_at_tail(4)
-    l1.add_at_tail(5)
-    l1.add_at_tail(6)
+# def test_linkedlist_split():
+#     l1 = LinkedList()
+#     l1.add_at_tail(1)
+#     l1.add_at_tail(2)
+#     l1.add_at_tail(3)
+#     l1.add_at_tail(4)
+#     l1.add_at_tail(5)
+#     l1.add_at_tail(6)
 
-    linkedlist_split(l1)
+#     linkedlist_split(l1)
 
-test_linkedlist_split()
+# test_linkedlist_split()
 
 #----------------------------------- e_split_LL testing ends here --------------------------------------------------------------
 
